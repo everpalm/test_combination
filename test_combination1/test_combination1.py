@@ -7,6 +7,11 @@ def append_list_10(target_x, input_y):
     else:
         return False
 
+def append_sample(target_list, append_list, b_num, z, y):
+    if append_list_10(z,y):
+        dummy = target_list.append([append_list[0], append_list[b_num]])
+    return target_list
+
 if __name__ == "__main__":
     a = [3,6,8,7,9,5,2]
     z = []
@@ -30,10 +35,11 @@ if __name__ == "__main__":
             #print(y)
             #if y <= 10:
             #    dummy = z.append(y)
-            if append_list_10(z,y):
-                dummy = sample.append([x[0], x[b_num]])
-            else:
-                continue
+            #if append_list_10(z,y):
+            #    dummy = sample.append([x[0], x[b_num]])
+            #else:
+            #    continue
+            sample = append_sample(sample, x, b_num, z, y)
 
     z_len = len(z) - 1
     #print(z_len)
