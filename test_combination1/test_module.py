@@ -1,6 +1,7 @@
 import unittest
 from unittest import mock
 from test_combination1 import Solution as sl
+import subprocess
 
 class test_module(unittest.TestCase):
     """description of class"""
@@ -21,6 +22,12 @@ class test_module(unittest.TestCase):
 
     def test_call_windows_bat(self):
         self.assertEqual(sl().CallWindowsBat(), 1)
+
+    def test_call_windows_bat1(self):
+        self.assertEqual(sl().CallWindowsBat1(), 0)
+
+    def test_LastBootUpTime(self):
+        self.assertEqual(subprocess.call(["LastBootUpTime.bat","0"]),0)
 
 if __name__ == "__main__":
     unittest.TextTestRunner(verbosity=3).run(unittest.TestLoader().loadTestsFromTestCase(test_module))

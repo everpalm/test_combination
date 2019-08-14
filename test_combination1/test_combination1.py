@@ -2,6 +2,7 @@
 # 7 elements stnad for 7 items of different price, choose two of them from these 7 items with 10 dollars
 # Brute force
 import subprocess
+from subprocess import Popen
 
 class Solution():
     def TwoSumBrute(self, price_list, target_price):
@@ -21,5 +22,12 @@ class Solution():
                 return [complement_list[target_price - price_list[anchor_count]], anchor_count]
             
     def CallWindowsBat(self):
-        print("Call Windows batch!")
+        print("Call test.bat")
+        #subprocess.call(["echo", "not my fault"], shell = True)
+        #subprocess.run(["echo", "good luck!"], shell = True)
+        #Popen(['dir', '/p'])
         return subprocess.call("test.bat")
+
+    def CallWindowsBat1(self):
+        print("Call LastBootUpTime.bat")
+        return subprocess.call(["LastBootUpTime.bat","0"])

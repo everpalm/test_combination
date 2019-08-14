@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>adc30b59-df86-4627-a2bb-e5c16206b79f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test_module.py</StartupFile>
+    <StartupFile>test_suite.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,9 +25,18 @@
     <Compile Include="test_module.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_suite.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GetMonthToDay.bat" />
+    <Content Include="GetYearToDay.bat" />
+    <Content Include="LastBootUpTime.bat" />
     <Content Include="test.bat">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="test1.bat">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>
