@@ -42,12 +42,24 @@ class Solution():
             z = y[digit_count] + z
             #print("z = ", z)
         if z[-1] == "-":
-            z = '-' + z[:len(z)-1]
+            #z = '-' + z[:len(z)-1]
+            z = '-' + z[:-1]
         #print("type of z = ", type(z))
         #print("z = ", z)
         x = int(z)
         #print("resulting x = ", x)
         #print(2**31-1)
+        if (x > (2**31-1)) or (x < (-2**31)):
+            return 0
+        return x
+    
+    def reverseInPlace(self, x):
+        y = list(str(x))
+        y[::-1] = y[::]
+        y = ''.join(y)
+        if y[-1] == "-":
+            y = '-' + y[:-1]
+        x = int(y)
         if (x > (2**31-1)) or (x < (-2**31)):
             return 0
         return x

@@ -2,7 +2,7 @@ from unittest import TestLoader as tl
 from unittest import TextTestRunner as ttr
 from unittest import TestCase as tc
 from unittest import mock
-#from test_combination1 import Solution as sl
+
 from leetcode import Solution as sl
 import subprocess
 
@@ -17,6 +17,7 @@ class test_two_sum(tc):
     
     def test_two_sum_improve(self):
         self.assertEqual(sl().TwoSumImprove([1,3,5,7], 10), [1,3])
+
     #@mock.patch('test_combination1.append_list_10')
     #def test_append_sample(self, mock_append_list_10):
      #   mock_append_list_10.return_value = True
@@ -48,8 +49,19 @@ class test_reverse(tc):
         self.assertEqual(sl().reverse(2**31), 0)
         self.assertEqual(sl().reverse(-2**31+1), 0)
 
+class test_reverseInPlace(tc):
+    def test_positive(self):
+        self.assertEqual(sl().reverseInPlace(123), 321)
+
+    def test_minus(self):
+        self.assertEqual(sl().reverseInPlace(-123), -321)
+
+    def test_overflow(self):
+        self.assertEqual(sl().reverseInPlace(2**31), 0)
+        self.assertEqual(sl().reverseInPlace(-2**31+1), 0)
+
 if __name__ == "__main__":
     #unittest.TextTestRunner(verbosity=3).run(unittest.TestLoader().loadTestsFromTestCase(test_module))
     runner = ttr(verbosity=3)
-    runner.run(tl().loadTestsFromTestCase(test_reverse))
+    runner.run(tl().loadTestsFromTestCase(test_reverseInPlace))
 
