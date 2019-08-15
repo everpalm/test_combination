@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>adc30b59-df86-4627-a2bb-e5c16206b79f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test_suite.py</StartupFile>
+    <StartupFile>test_case.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,10 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="test_combination1.py" />
-    <Compile Include="test_module.py">
+    <Compile Include="test_case.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_combination1.py" />
     <Compile Include="test_suite.py">
       <SubType>Code</SubType>
     </Compile>
