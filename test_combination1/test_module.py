@@ -36,6 +36,12 @@ class test_module(tc):
     def test_GetMonthToDay(self):
         self.assertEqual(subprocess.call(['GetMonthToday.bat','2019','8','0']),0)
 
+    def test_reverse(self):
+        self.assertEqual(sl().reverse(123), 321)
+
+    def test_reverse_minus(self):
+        self.assertEqual(sl().reverse(-123), -321)
+
 if __name__ == "__main__":
     #unittest.TextTestRunner(verbosity=3).run(unittest.TestLoader().loadTestsFromTestCase(test_module))
     runner = ttr(verbosity=3)
