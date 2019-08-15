@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>adc30b59-df86-4627-a2bb-e5c16206b79f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test_suite.py</StartupFile>
+    <StartupFile>test_module.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

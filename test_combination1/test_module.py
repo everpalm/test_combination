@@ -1,9 +1,13 @@
-import unittest
+#import unittest
+from unittest import TestLoader as tl
+from unittest import TextTestRunner as ttr
+from unittest import TestCase as tc
 from unittest import mock
 from test_combination1 import Solution as sl
 import subprocess
 
-class test_module(unittest.TestCase):
+#class test_module(unittest.TestCase):
+class test_module(tc):
     """description of class"""
     # This is test version
     # 7 elements stnad for 7 items of different price, choose two of them from these 7 items with 10 dollars
@@ -29,7 +33,10 @@ class test_module(unittest.TestCase):
     def test_LastBootUpTime(self):
         self.assertEqual(subprocess.call(["LastBootUpTime.bat","0"]),0)
 
+    def test_GetMonthToDay(self):
+        self.assertEqual(subprocess.call(['GetMonthToday.bat','2019','8','0']),0)
+
 if __name__ == "__main__":
-    unittest.TextTestRunner(verbosity=3).run(unittest.TestLoader().loadTestsFromTestCase(test_module))
-
-
+    #unittest.TextTestRunner(verbosity=3).run(unittest.TestLoader().loadTestsFromTestCase(test_module))
+    runner = ttr(verbosity=3)
+    runner.run(tl().loadTestsFromTestCase(test_module))
