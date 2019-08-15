@@ -2,7 +2,8 @@ from unittest import TestLoader as tl
 from unittest import TextTestRunner as ttr
 from unittest import TestCase as tc
 from unittest import mock
-from test_combination1 import Solution as sl
+#from test_combination1 import Solution as sl
+from leetcode import Solution as sl
 import subprocess
 
 #class test_module(unittest.TestCase):

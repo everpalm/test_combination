@@ -21,10 +21,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="leetcode.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_case.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="test_combination1.py" />
     <Compile Include="test_suite.py">
       <SubType>Code</SubType>
     </Compile>
